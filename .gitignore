@@ -1,0 +1,23 @@
+# Python 関連
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# 仮想環境
+venv/
+env/
+.venv/
+.env
+
+# IDE 関連
+.vscode/
+.idea/
+*.swp
+
+# OS 関連
+.DS_Store
+Thumbs.db
+
+# その他
+file/
