@@ -17,12 +17,12 @@ httplib2==0.22.0
 idna==3.10
 lxml==6.0.0
 openpyxl==3.1.5
-types-openpyxl==3.1.5.20250602
 pillow==11.3.0
 proto-plus==1.26.1
 protobuf==5.29.5
 pyasn1==0.6.1
 pyasn1_modules==0.4.2
+pycryptodome==3.23.0
 pydantic==2.11.7
 pydantic_core==2.33.2
 pyparsing==3.2.3
@@ -34,6 +34,8 @@ requests==2.32.4
 rsa==4.9.1
 soupsieve==2.7
 tqdm==4.67.1
+types-openpyxl==3.1.5.20250602
+types-requests==2.32.4.20250611
 types-tqdm==4.67.0.20250516
 typing-inspection==0.4.1
 typing_extensions==4.14.1

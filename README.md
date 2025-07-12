@@ -2,12 +2,17 @@
 
 指定したディレクトリ内のファイルを検索し、テキストファイルからキーワードを抽出、画像ファイルをAI解析して結果をExcelに出力するシステムです。<br>`search_result.xlsx`という検索結果のExcelファイルが出力されます。
 
+> [!NOTE]
+> Cursor の Agent Mode（Auto）を通じたAI駆動開発の機能となります
+
 ## ユースケース
 
 - **文書管理**: 大量の文書（PDF、Excel、Word、PowerPoint等）から特定のキーワードを含むファイルを検索
+    - `.txt`, `.md`, `.json`, `.csv`, `.pdf`, `.xlsx`, `.docx`, `.pptx`
 - **画像整理**: 画像ファイルの内容を自動解析して分類
+    - `.jpg`, `.jpeg`, `.png`, `.gif`, `.webp`
 - **データ抽出**: 複数のファイル形式から情報を統一的に抽出
-- **レポート作成**: 検索結果をExcelで整理してレポート作成
+- **レポート作成**: 検索結果をExcelで整理してレポート作成（`search_result.xlsx`）
 
 ## 使い方
 ### 仮想環境を構築（初回のみ）
@@ -32,7 +37,7 @@ pip install -r ../requirements.txt
 > インポートしたライブラリを`requirements.txt`に保存する場合は以下コマンドを実行
 ```bash
 # 一階層前にある requirements.txt にライブラリ情報を保存
-python -m pip freeze > ../requirements.txt
+python -m pip freeze > requirements.txt
 ```
 
 ### 仮想環境を立ち上げる（初回以降）
@@ -58,25 +63,8 @@ cd ../
 python3 main.py
 ```
 
-## 対応ファイル形式
-
-### テキストファイル
-- `.txt`, `.md`, `.json`, `.csv`, `.pdf`, `.xlsx`, `.docx`, `.pptx`
-
-### 画像ファイル
-- `.jpg`, `.jpeg`, `.png`, `.gif`, `.webp`
-
-## 技術スタック
-
-- **AI解析**: Google Gemini API (`google-generativeai`)
-- **画像処理**: PIL (Pillow)
-- **Excel操作**: openpyxl
-- **環境管理**: python-dotenv
-- **その他**: requests, beautifulsoup4, PyPDF2, python-docx等
-
 ## 注意事項
 
 - 大量のファイルを処理する場合は時間がかかる場合があります
 - 画像解析にはGemini APIの利用料金が発生します
 - 機密情報を含むファイルの処理には十分注意してください
-# excerpt-allfiles-info-py
