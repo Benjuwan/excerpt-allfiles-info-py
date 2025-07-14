@@ -27,11 +27,11 @@ def main():
     print(f"キーワード: {keyword}")
     print(f"{'=' * 50}\n")
 
-    analyzer = GeminiImageAnalyzer(api_key=api_key)
+    images_analyze = GeminiImageAnalyzer(api_key=api_key)
     print(f"[INFO] Gemini AI初期化完了")
 
     start_time = time.time()
-    results = search_files_with_keyword(directory, keyword, analyzer)
+    results = search_files_with_keyword(directory, keyword, images_analyze)
     end_time = time.time()
 
     print(f"\n{'=' * 50}")

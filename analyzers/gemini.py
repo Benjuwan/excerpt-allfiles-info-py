@@ -26,7 +26,9 @@ class GeminiImageAnalyzer(ImageAnalyzer):
         指定した画像ファイルをGemini AIで解析し、
         その内容がキーワードを含むかどうかをAIに判定させて返します
         """
+
         prompt = f"この画像に『{keyword}』というキーワードが含まれているかどうかをチェックしてください。含まれていれば「画像の〇〇箇所にあります」など画像内での該当箇所を説明し、含まれていなければ「含まない」とだけ明記してください。"
+
         try:
             img = Image.open(images_file_path)
             response = self.model.generate_content([img, prompt])
