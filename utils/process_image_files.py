@@ -1,5 +1,6 @@
 from pathlib import Path
 from tqdm import tqdm
+
 from ext_constants import IMAGE_EXTENSIONS
 
 
@@ -31,14 +32,8 @@ def process_image_files(image_files, keyword, image_analyzer):
                     )
             else:
                 analysis = f"画像データ（{ext}）ではないので処理スキップします"
-                if keyword in analysis:
-                    results.append(
-                        {
-                            "type": "image",
-                            "file": Path(file_path).name,
-                            "path": file_path,
-                            "analysis": analysis,
-                        }
-                    )
+                continue
+
         print(f"[INFO] 画像ファイル解析完了: {len(results)}件ヒット")
+
     return results
