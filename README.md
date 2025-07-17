@@ -1,4 +1,4 @@
-# excerpt-allpages-info-py
+# excerpt-allfiles-info-py
 
 指定したディレクトリ内のファイルを検索し、テキストファイルからキーワードを抽出、画像ファイルをAI解析して結果をExcelに出力するシステムです。<br>`search_result.xlsx`という検索結果のExcelファイルが出力されます。
 
